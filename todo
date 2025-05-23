@@ -1,0 +1,8 @@
+* backend - properly implement deactivate user
+* select loan
+* backend - properly implement jwt expiry
+* profile
+* settings
+* dashboard
+
+https://icy-plant-06afd7010.2.azurestaticapps.net/login?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJIZWlycyBJbnN1cmFuY2UgTGltaXRlZCIsImp0aSI6IjRmMTI2MzkxLTgyODItNDhhMC1iMmI4LTRhNGVlYzBiZjM1YSIsImlhdCI6MTc0NDM3MTMxOSwiZXhwIjoxNzQ0MzczMTE5LCJzdWIiOiI0ZjEyNjM5MS04MjgyLTQ4YTAtYjJiOC00YTRlZWMwYmYzNWEifQ.6A_vttPjVZTGEPZX7OIdjfr9CLL_JIqzhLAvFRtGhM4

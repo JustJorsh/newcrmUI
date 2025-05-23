@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8" />
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#12213c" />
+  <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-digital.css" />
+  <script src="http://github.hubspot.com/odometer/odometer.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>HH</title>
+  <style>
+    body {
+      font-family: 'Nunito Sans', sans-serif
+    }
+
+    .number-section.number-section-theme-digital .odometer {
+      border: .1em solid #00CCFF;
+    }
+  </style>
+</head>
+
+<body class="h-100">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div class="h-100 d-flex justify-content-center align-items-center" style="background-color: black;">
+    <div class="column">
+      <div class="number-section number-section-theme-digital ">
+        <h1 class="users text-center" style="font-size: 10rem;"></h1>
+      </div>
+      <h1 id="key" class="display-4 text-center" style="font-weight: bolder; color: #00CCFF;">TOTAL USERS</h1>
+    </div>
+  </div>
+</body>
+<script>
+  const odometer = new Odometer({ el: $('.users')[0], value: 0, theme: 'digital' });
+  const metrics = {}
+  const sequence = ["HLA_user", "HIL_users", "HLA_policy", "HIL_policy"]
+  let current = 0
+  odometer.render();
+  function load() {
+    $.get("https://crmbackend.services.heirslifeassurance.com/dashboard/report/count", function (data) {
+      setTimeout(update.bind(this, true), Object.keys(metrics).length ? 0 : 2000)
+      console.log(data);
+      Object.assign(metrics, data.data)
+    });
+  }
+  function update(silent) {
+    if (!sequence[current]) current = 0
+    let value = 0
+    switch (sequence[current]) {
+      case "HLA_user":
+        value = metrics?.[1].count
+        $("#key").html("TOTAL USERS (HLA)")
+        break;
+
+      case "HIL_users":
+        value = metrics?.[0].count
+        $("#key").html("TOTAL USERS (HIL)")
+        break;
+
+      case "HLA_policy":
+        value = metrics?.[2].count
+        $("#key").html("TOTAL POLICY (HLA)")
+        break;
+
+      case "HIL_policy":
+        value = metrics?.[3].count
+        $("#key").html("TOTAL POLICY (HIL)")
+        break;
+
+      default:
+        break;
+    }
+    odometer.update(value)
+    let distance = (Math.round(value / 1000) * 1000) - value
+    if (distance < 0) distance = 1000 + distance
+    if (distance > 25 && !silent)
+      current++
+  }
+  load()
+  setInterval(load, 10000)
+  setInterval(update, 60000)
+</script>
+
+</html>

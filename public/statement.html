@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statement</title>
+  <style>
+    .app-missed-premium-modal {
+  position: fixed;
+  top: 40px;
+  z-index: 1000;
+  background-color: #ffffff !important;
+  height: 800px;
+  /* width: 808px; */
+}
+*{
+  font-family: 'Quicksand', sans-serif !important;
+  /* color: #54565A !important */
+}
+@page 
+{ 
+    size: A4 portrait;
+    margin: 30px 0; 
+}
+
+.logo_ {
+  /* width: 80px; */
+  height: 30px;
+}
+
+/* .over-light:hover {
+  color: #ffffff;
+  background-color: white;
+} */
+
+.premiumdetails2 {
+  font-size: 8px !important;
+  font-weight: 500;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+
+  font-family: inter;
+  text-align: right;
+  width: 35%;
+  display: inline-block;
+  line-height: 15px;
+}
+
+.premiumtop {
+  font-weight: 300 !important;
+  font-size: 10px !important;
+
+}
+
+.chart {
+  padding: 5px 0px;
+  height: auto;
+  width: 95%;
+  display: block;
+  color: #ffffff;
+  margin: auto
+}
+.thead {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.chart1 {
+  background-color: #e6e5e5;
+}
+.chart2 {
+  background-color:#828282
+
+}
+.chart3 {
+  background-color: #FE0000;
+  width: 95%;
+  height: auto;
+  margin: auto;
+
+}
+.chart4 {
+  /* background-color: #FE0000; */
+  width: 95%;
+  height: auto;
+  margin: auto;
+
+}
+.chart3 img{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+table {
+ 
+  border-collapse: collapse;
+  width: 95%;
+  margin: auto;
+}
+
+td, th {
+  border: 1px solid #A5A5A5;
+  text-align: left;
+  padding: 8px 3px;
+  font-size: 6px;
+  font-weight: 400;
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+tr:nth-child(odd) {
+  background-color: #E6E7E8;
+}
+.advertimage {
+  height: 105px;
+  width: 100%;
+}
+.icons{
+  text-align: left;
+  padding-top: 2px;
+}
+
+.icons img{
+  width: 10px;
+  height: 10px;
+  /* margin: 2px; */
+}
+.boldNames {
+  color: #5A5C61 !important;
+  font-size: 10px !important;
+  font-weight: 700;
+  line-height: 18px;
+  font-family: 'Quicksand', sans-serif !important;
+}
+.tinyBoldNames {
+  color: #54565A;
+  font-size: 5px !important;
+  font-weight: 400;
+  font-family: 'Quicksand', sans-serif !important;
+  line-height: 11px;
+
+}
+
+.tinyBoldNames1 {
+  color: #54565A !important;
+}
+.tinyBoldNames2 {
+  color: rgb(255, 255, 255) !important;
+}
+
+.padRight{
+  margin-left: 8px;
+}
+
+.chartamount {
+  font-weight: 400 !important;
+  font-stretch: extra-condensed;
+  font-size: 20px;
+  font-family: "Helvetica Neue", "Lato", "Open Sans", sans-serif;
+  /* line-height: 30px; */
+}
+
+.chartamountW {
+  color: #ffffff !important;
+}
+.chartamountB {
+  color: #54565A !important;
+}
+
+.tagline {
+  font-weight: lighter;
+  font-size: 7px;
+}
+
+.tag2 {
+  font-weight: lighter;
+  font-size:7px;
+  padding: 1px;
+}
+
+.iconlink {
+  font-weight: lighter;
+  font-size: 8px;
+  color: white;
+}
+.iconlink:active {
+  color: white;
+}
+.iconlink:hover {
+  color: white;
+}
+
+.social-icon {
+  margin-right: 15px;
+  height: 10px;
+  width: 10px;
+}
+
+.paddinalil {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.marginalil {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.globeSmallSpin {
+  height: 20px;
+}
+
+.startRolling {
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.donut {
+  background: #ffffff;
+  font-size: small;
+  display: block;
+  width: 130px;
+  height: 130px;
+  
+  /* transform: translate(-50%, -50%); */
+  border: 15px solid red;
+
+  border-radius: 100%;
+  border-top: 15px solid rgb(230, 229, 229);
+  border-right: 15px solid #54565A;
+
+  /* border: 8px solid #FF6188; */
+  /* border-left: 8px solid #78DCDC; */
+}
+.side{
+  font-family: 'Quicksand', sans-serif !important;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 15px;
+  color: #54565A;
+}
+.downloaddate {
+  font-size: 8px;
+  color: #54565A;
+  font-weight: 300;
+  font-style: italic;
+}
+  </style>
+</head>
+<body>
+  <script>  let statement = null;
+    function getParameterByName(name, url = window.location.href) {
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+    function load() {
+      const policyNo = getParameterByName('id');
+      const record = localStorage.getItem(`statement-${policyNo}`);
+      const decode = JSON.parse(record);
+      console.log(decode);
+      statement = decode;
+    }
+    load();
+  </script>
+  <div style="border: 1px solid #443d3f; border-radius: 15px; margin: 2px; padding: 5px 2px">
+    <div class="app-missed-premium-modal">
+    </div>
+    <div class="container" id="statementdiv" #statementdiv>
+      <div class=""">
+      <div class=" container border p-3" style="padding: 3px;">
+        <!-- Logo row -->
+        <div class="container">
+          <span class="justify-content-between">
+            <img class="logo_"
+              src="data:image/png;base64,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"
+              alt="logo" />
+            <h4
+              style="color: #FF0101; display:inline-block; width: 80%; text-align: right; padding-right: 10px; font-family: Helvetica, sans-serif, sans-serif">
+              Premium Statement</h4>
+          </span>
+        </div>
+        <br />
+        <!-- Header row -->
+        <div class="container" style="padding-bottom: 16px; margin: 15px 0px;">
+          <span class="row">
+            <div class="" style="width: 50%; display: block; padding-left: 15px;">
+              <div class="font-weight-bold pb-2"
+                style="font-weight: bold; padding-bottom: 6px; ;  flex-direction: column;">
+                <h3 class="tinyBoldNames clearfix"> INSURED NAME</h3>
+                <h3 class="boldNames" style="margin-top: 1px; margin-bottom: 0px;" id="name">
+                </h3>
+              </div>
+              <!-- <div class="font-weight-bold">
+                <span class="tinyBoldNames clearfix"> ADDRESS</span>
+                <span class="boldNames">
+                  {{ data.premiumStatement.policyDetail.ADDRESS }}
+                </span>
+              </div> -->
+              <div class="font-weight-bold" style="font-weight: bold; padding-bottom: 10px; flex-direction: column;">
+                <h3 class="tinyBoldNames clearfix"> PRODUCT TYPE</h3>
+                <h3 class="boldNames" style="margin-top: 1px; margin-bottom: 0px;" id="policy_details_plan">
+                </h3>
+              </div>
+              <div class="font-weight-bold" style="font-weight: bold; padding-bottom: 10px; ;  flex-direction: column;">
+                <h3 class="tinyBoldNames clearfix">POLICY NUMBER</h3>
+                <h3 class="boldNames" style="margin-top: 1px; margin-bottom: 0px;" id="policy_no">
+                </h3>
+              </div>
+            </div>
+            <!-- second col -->
+            <div class="col-md-4" style="width:230px; position: absolute; right: 5%; top: 100px">
+              <div class="align-middle">
+                <!-- <div
+                  class="premiumtop"
+                >
+                  <span>Premium Position</span>
+                  <span class="premiumdetails2">
+                    {{ data.premiumStatement.PremiumPosition }}</span
+                  >
+                </div> -->
+                <div class="premiumtop" style="margin: 8px auto; padding-bottom:3px; border-bottom: 1px solid">
+                  <span class="side"
+                    style="margin-top: 1px; margin-bottom: 0px; width: 60%; display: inline-block;">Premium
+                    Position</span>
+                  <span class="premiumdetails2" id="PremiumPosition">
+
+                  </span>
+                </div>
+                <div class="premiumtop" style="margin: 8px auto; padding-bottom:3px; border-bottom: 1px solid #5A5C61">
+                  <span class="side"
+                    style="margin-top: 1px; margin-bottom: 0px; width: 60%; display: inline-block;">Effective
+                    Date</span>
+                  <span class="premiumdetails2" id="effectiveDate">
+                  </span>
+                </div>
+                <div class="premiumtop" style="margin: 8px auto; padding-bottom:3px; border-bottom: 1px solid #5A5C61">
+                  <span class="side"
+                    style="margin-top: 1px; margin-bottom: 0px; width: 60%; display: inline-block;">Maturity Date</span>
+                  <span class="premiumdetails2" id="expiryDate">
+
+                  </span>
+                </div>
+                <div class="premiumtop" style="margin: 8px auto; padding-bottom:3px; border-bottom: 1px solid #5A5C61">
+                  <span class="side"
+                    style="margin-top: 1px; margin-bottom: 0px; width: 60%; display: inline-block;">Premium
+                    Amount</span>
+                  <span class="premiumdetails2" id="premiumAmount">
+                  </span>
+                </div>
+                <div class="premiumtop" style="margin: 8px auto; padding-bottom:3px; border-bottom: 1px solid">
+                  <span class="side"
+                    style="margin-top: 1px; margin-bottom: 0px; width: 60%; display: inline-block;">Total Missed
+                    Premium</span>
+                  <span class="premiumdetails2" id="cummulative_missed_premium">
+                  </span>
+                </div>
+                <div class="premiumtop" style="margin: 8px auto; padding-bottom:3px; border-bottom: 1px solid">
+                  <span class="side"
+                    style="margin-top: 1px; margin-bottom: 0px; width: 60%; display: inline-block;">Interest Earned</span>
+                  <span class="premiumdetails2" id="interest_earned">
+                  </span>
+                </div>
+                <div class="premiumtop" style="margin: 8px auto; padding-bottom:3px; border-bottom: 1px solid">
+                  <span class="side"
+                    style="margin-top: 1px; margin-bottom: 0px; width: 60%; display: inline-block;">Cover Tenure</span>
+                  <span class="premiumdetails2" id="duration"></span>
+                </div>
+                <div class="premiumtop" style="margin: 8px auto; padding-bottom:3px; border-bottom: 1px solid">
+                  <span class="side"
+                    style="margin-top: 1px; margin-bottom: 0px; width: 60%; display: inline-block;">Premium
+                    Frequency</span>
+                  <span class="premiumdetails2" id="PremiumFrequency">
+
+                  </span>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </div>
+            </div>
+          </span>
+        </div>
+
+        <!-- Chart Row -->
+        <div class="container">
+          <div class="row" style="margin: 20px 0px; width: 50%;">
+            <div class="">
+              <div class="chart chart1 d-flex align-items-center">
+                <span class="font-weight-bold padRight">
+                  <span class="tinyBoldNames" style="color: #353535;"> TOTAL INCOME</span>
+                  <br />
+                  <!-- <span class="chartamount chartamountB"
+                    >N {{ data.premiumStatement.premium }}</span
+                  > -->
+                  <span class="chartamount chartamountB padRight" id="statementTotal">
+                  </span>
+                </span>
+              </div>
+              <div class="chart chart2 d-flex align-items-center">
+                <span class="font-weight-bold padRight">
+                  <span class="tinyBoldNames tinyBoldNames2">INTEREST EARNED</span>
+                  <br />
+                  <span class="chartamount chartamountW padRight" id="interest_earned2">
+                  </span>
+                </span>
+              </div>              
+              <div class="chart chart1 d-flex align-items-center">
+                <span class="font-weight-bold padRight">
+                  <span class="tinyBoldNames" style="color: #353535;">TOTAL PAYOUT</span>
+                  <br />
+
+                  <span class="chartamount chartamountB padRight" id="widthdrawal">
+                  </span>
+                </span>
+              </div>
+
+              <div class="chart chart3 d-flex align-items-center">
+                <span class="font-weight-bold padRight">
+                  <span class="tinyBoldNames tinyBoldNames2">SUM INSURED</span>
+                  <br />
+                  <span class="chartamount chartamountW padRight" id="sumInsured">
+                  </span>
+                </span>
+              </div>
+            </div>
+            <!-- <div class="col-md-5" style="width: auto;"> -->
+
+
+            <div class="donut" style="position: absolute; right: 8%; top: 300px; margin-top: 28px;">
+              <div class=" " style="height:8px; position: relative; text-align: center; top: 40%">SUM INSURED</div>
+              <div style="height:15px; position: relative; text-align: center; top: 45%; color: #54565A;" id="sumInsured2">
+               
+              </div>
+            </div>
+
+            <!-- <div class="donut instalment2">
+                <div class="donut-default"></div>
+                <div class="donut-line"></div>
+                <div class="donut-text d-flex align-items-center">
+                  <div>SUM INSURED  </div>
+                  <br />
+                  <div>N{{ data.premiumStatement.policyDetail.SUM_INSURED }}</div>
+                </div>
+                <div class="donut-case"></div>
+              </div> -->
+
+            <!-- <div>
+                    <div>
+                      <div style="display: block">
+                        <canvas baseChart
+                          [data]="doughnutChartData"
+  
+                          [type]="doughnutChartType">
+                        </canvas>
+                      </div>
+                    </div>
+                  </div> -->
+
+            <!-- <div>
+                <div>
+                  <div>
+                    <canvas
+                      baseChart
+                      [data]="doughnutChartData"
+                      [type]="doughnutChartLabels"
+                    >
+                    </canvas>
+                  </div>
+                </div>
+              </div> -->
+
+            <!--  -->
+            <!-- </div> -->
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="container" style="margin: 20px 0px;">
+          <div class="row">
+            <div>
+              <div class="p-2 text-center text-light chart3 mb-3"
+                style="padding: 6px 0; text-align: center; width: 95%; margin: 10px auto; color: white; font-weight: lighter;"
+                id="dateduration">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <table id="statement-data">
+                <tr>
+                  <th>S/N</th>
+                  <th>Transaction Date</th>
+                  <th>Transaction Type</th>
+                  <th>Credit</th>
+                  <th>Debit</th>
+                  <!-- <th scope="col">Missed Premium</th> -->
+                  <th>Amount Balance</th>
+                </tr>
+                <tr></tr>
+                <script>
+                  let k = 1;
+                  let balance = 0;
+                  let statementTotal = 0;
+                  let widthdrawal = 0;
+                  statement?.statementsData.forEach(element => {
+                    var parenttbl = document.getElementById("statement-data");
+                    let statement = document.createElement('tr');
+                    for (var i = 0; i < 6; i++) {
+                      let newel = document.createElement('td');
+                      newel.setAttribute('id', i);
+                      if (i == 0)
+                        newel.innerHTML = `<span class='cls_007'> ${k++}</span>`;
+                      else if (i == 1)
+                        newel.innerHTML = `<span class='cls_007'> ${element.date}</span>`;
+                      else if (i == 2)
+                        newel.innerHTML = `<span class='cls_007'> ${element.description}</span>`;
+                      else if (i == 3) {
+                        if (+element.amount > 0) {
+                          statementTotal = statementTotal + (+element.amount);
+                          newel.innerHTML = `<span class='cls_007'> ${(element.amount).toLocaleString('en-US')}</span>`;
+                        }
+                      }
+                      else if (i == 4) {
+                        if (0 > +element.amount) {
+                          widthdrawal = widthdrawal + (+element.amount);
+                          newel.innerHTML = `<span class='cls_007'> ${(element.amount).toLocaleString('en-US')}</span>`;
+                        }
+                      }
+                      else if (i == 5) {
+                        balance = balance + (+element.amount);
+                        newel.innerHTML = `<span class='cls_007'> ${(balance).toLocaleString('en-US')}</span>`;
+                      }
+
+                      statement.appendChild(newel);
+                    }
+                    parenttbl.appendChild(statement);
+                  });
+                  document.getElementById("statementTotal").innerHTML = `${statementTotal.toLocaleString('en-US', { style: 'currency', currency: statement?.policyDetail.CRG_CUR_CODE })}`;
+                  document.getElementById("widthdrawal").innerHTML = `${widthdrawal.toLocaleString('en-US', { style: 'currency', currency: statement?.policyDetail.CRG_CUR_CODE })}`
+
+                </script>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- tagline -->
+        <div class="container" style="text-align: center; margin-bottom: 6px;">
+          <div class="row">
+            <div>
+              <span class="tagline">
+                Please do not pay premium to an individual. Kindly make your
+                payment to Heirs Life Assurance.
+                <a href="https://simple.heirslifeassurance.com/" rel="noopener noreferrer"
+                  style="text-decoration: none;">
+                  <strong style="color: red;"> Click HERE </strong>
+                </a>
+                to pay.
+              </span>
+            </div>
+            <div>
+              <span class="tagline" style="margin: 2px 15px;">
+                If you notice any irregularities in the attached statement, kindly
+                call us <strong style="color: red;">0700 434 7754</strong> or chat
+                us on WhatsApp
+                <strong style="color: red;"> 0912 222 2200 </strong> or email
+                <strong style="color: red;">
+                  wecare@heirslifeassurance.com
+                </strong>
+              </span>
+            </div>
+            <div>
+              <span class="tagline" style="margin: 2px 15px;" id="policyClause">
+               
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Advert -->
+        <div class="container !justify">
+          <div class="row">
+            <div>
+              <div class="chart4">
+                <!-- <a href="https://www.heirslifeassurance.com/claims"> -->
+                  <img
+                    class="advertimage"
+                    src= "https://mcusercontent.com/4e8c264b4fba54d1418de981f/images/ae8fd85a-f984-c2c8-7c65-51d305386ba5.jpg"
+                    alt="Advert"
+                    srcset=""
+                  />
+                <!-- </a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- socials -->
+        <div style="margin-top: 6px; margin-bottom: 8px">
+          <div class="row">
+            <div >
+              <div class="chart3">
+                <div style="padding-left: 9px; padding-right: 9px;">
+                  <div class="icons"
+                   style="width: 55%; padding-left: 6px; font-weight: lighter; display: inline-block;">
+                   <a href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fweb.facebook.com%2Fheirslifeassurance%2F&data=04%7C01%7Celvis.akozor%40heirsgeneralinsurance.com%7C75670623f9054afefd9208d9af51e265%7Cdf7531f6aa624031bf35e67d299b0e91%7C0%7C0%7C637733588509040784%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=9aU41SmstphhdJ0Rq8ltg9ogkYO55SF4W3r846Q%2FUUw%3D&reserved=0" style="text-decoration: none;"><img
+                      class="social-icon"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAABXmlDQ1BJQ0MgUHJvZmlsZQAAKJF1kEFLAlEQx/9rhlB7CI3o0MFbCBbieuhSYBYZLLFokXV7rptGuj3WjahDRB8hoo8Q3QuEKCjo1CkICoKgS32BwEvJa95aqUUzPObHn5l5fwbwqYzzsh9AxXadzMxkOLe0HA68QoUPQQxjgJlVnjQMnVrwXTujfg9F1rsRuWtPD10rubM1drKjBS9unv72d0RPwaqaVD/oJUzuuIASIzY2XS55l7jfIVPEB5KLTT6WnG/yudczn0kR3xL3mSVWIH4mjubb9GIbV8ob5pcH6V617IUs1UF6Q5jCNHTKMLLQEPcyjbl/ZhLeTArr4NiCg1UUUYJL00lSOMqwiGdhw8QoosRxxOROeevfN2xp2xPA2Dh99dLSshpwuk/20dIiFhCim12lOXPYz2WVur+6osWb3FsDug+FeFsEAhGg8SDEe02IxhHQ9Qhc1j8BvMdh5Z+Jid4AAAA4ZVhJZk1NACoAAAAIAAGHaQAEAAAAAQAAABoAAAAAAAKgAgAEAAAAAQAAABagAwAEAAAAAQAAABYAAAAAP+kRYAAAANdJREFUOBHtk+0NwiAQhotxAN0AN3AEOol1kqaTdBRXcISO4Ab4HELtVyoS+sPESw6OK/dwfWkLa22N57ZaCbHYwHYbMB0yFXynusSPyhvxyRH9sB8uIuOOfSW8x9r+lI6vn6By4NeXB1SFTrl3TdziMotpNzKkSBFqZa5wg88sRYoZZCkR23G3VExOLjA8OxCLvyzmlwt712Y4ZsjKKcV5eHBO8FsGTojSmFe8hW742soQk6+IL3496jgKTKHxxdNJkzDTpKxzSjHi/8G9HL8pRdP3ny9onhQop89z4QYwAAAAAElFTkSuQmCC"
+                      alt=""
+                      srcset=""
+                    /></a>
+                    <a href="https://twitter.com/HeirsLife_" style="text-decoration: none;"><img
+                      class="social-icon"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAABXmlDQ1BJQ0MgUHJvZmlsZQAAKJF1kEFLAlEQx/9rhlB7CI3o0MFbCBbieuhSYBYZLLFokXV7rptGuj3WjahDRB8hoo8Q3QuEKCjo1CkICoKgS32BwEvJa95aqUUzPObHn5l5fwbwqYzzsh9AxXadzMxkOLe0HA68QoUPQQxjgJlVnjQMnVrwXTujfg9F1rsRuWtPD10rubM1drKjBS9unv72d0RPwaqaVD/oJUzuuIASIzY2XS55l7jfIVPEB5KLTT6WnG/yudczn0kR3xL3mSVWIH4mjubb9GIbV8ob5pcH6V617IUs1UF6Q5jCNHTKMLLQEPcyjbl/ZhLeTArr4NiCg1UUUYJL00lSOMqwiGdhw8QoosRxxOROeevfN2xp2xPA2Dh99dLSshpwuk/20dIiFhCim12lOXPYz2WVur+6osWb3FsDug+FeFsEAhGg8SDEe02IxhHQ9Qhc1j8BvMdh5Z+Jid4AAAA4ZVhJZk1NACoAAAAIAAGHaQAEAAAAAQAAABoAAAAAAAKgAgAEAAAAAQAAABagAwAEAAAAAQAAABIAAAAAymm3oAAAAStJREFUOBGllItxwjAQRG0mBVCCOgglmE5UAiWECqADnAoowU4FTioQHZAOzFtGJz4ef8A7s9zpPsvJkp1lL6JtWwcreIZCA73J4BdwdV3jHKGzZJ9VAzRB3AdIQ7mQ+mM6YAfF1QSHEEhuYJHxs4T32KR/vHMo0BanoExtVD9vLxDzqQBHaziGxnoW0dlaIFqHPUSVCrtj/RlzQ+Y/JWnSo9A0JZyLgwl/RCcFLPGm/bO+RZ7nGr+2wEz7+9DP/h0MM5/D7f6ifj08pj7hr+E3vB0Aixeg3i6YtpgxsXbruqoxQvLdm+F7RS2B+BcMcCr21jtqUZx6mOUUMb0oes47+PyKE+pgeFLKPWw6bf2BilQxNmluBRSv8D3UN0H+EgqnyB9szdWssaO4APys7EoqkXOVAAAAAElFTkSuQmCC"
+                      alt=""
+                      srcset=""
+                    /></a>
+                    <a href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fheirs-life%2F&data=04%7C01%7Celvis.akozor%40heirsgeneralinsurance.com%7C75670623f9054afefd9208d9af51e265%7Cdf7531f6aa624031bf35e67d299b0e91%7C0%7C0%7C637733588509040784%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=0xEoLU6CAmQFKOHmbaq8UeYk4BpCE6kj9MoeDBDXAj4%3D&reserved=0" style="text-decoration: none;"><img
+                      class="social-icon"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAABXmlDQ1BJQ0MgUHJvZmlsZQAAKJF1kEFLAlEQx/9rhlB7CI3o0MFbCBbieuhSYBYZLLFokXV7rptGuj3WjahDRB8hoo8Q3QuEKCjo1CkICoKgS32BwEvJa95aqUUzPObHn5l5fwbwqYzzsh9AxXadzMxkOLe0HA68QoUPQQxjgJlVnjQMnVrwXTujfg9F1rsRuWtPD10rubM1drKjBS9unv72d0RPwaqaVD/oJUzuuIASIzY2XS55l7jfIVPEB5KLTT6WnG/yudczn0kR3xL3mSVWIH4mjubb9GIbV8ob5pcH6V617IUs1UF6Q5jCNHTKMLLQEPcyjbl/ZhLeTArr4NiCg1UUUYJL00lSOMqwiGdhw8QoosRxxOROeevfN2xp2xPA2Dh99dLSshpwuk/20dIiFhCim12lOXPYz2WVur+6osWb3FsDug+FeFsEAhGg8SDEe02IxhHQ9Qhc1j8BvMdh5Z+Jid4AAAA4ZVhJZk1NACoAAAAIAAGHaQAEAAAAAQAAABoAAAAAAAKgAgAEAAAAAQAAABSgAwAEAAAAAQAAABYAAAAA69WBpwAAAPhJREFUOBHNk+ENgjAQhanxvziBdQIdoZu4giO4AhOAIziBOIFuoCOwAb7Do7leMGlNTbjkpe9a7qNcS9H3fQ3litoQqcgYi4ysAfV34AOvWUNbiHxy6B1WxpgOeoF0SaahQAN3ArIRPtpOnXKL6hLaR1PEg0vhybbQjQyHxVixp93TSyjvIAcdoDDUjT6Nq5hvoKfILXI75jQid1AQuofy+cDzQXWoduMC5lp4ko9oIFfcMV4BPXqCug3RQN6ZZZATQOqnj2igr/iYlcp9+ivQA7SZP1BfbPkFQ59wGJYnS7FYivmgn1O/nqhLt/PvIe3wnP5hXyuaNwFKrtyjLhnjAAAAAElFTkSuQmCC"
+                      alt=""
+                      srcset=""
+                    /></a>
+                    <a href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.instagram.com%2Fheirs.life%2F&data=04%7C01%7Celvis.akozor%40heirsgeneralinsurance.com%7C75670623f9054afefd9208d9af51e265%7Cdf7531f6aa624031bf35e67d299b0e91%7C0%7C0%7C637733588509040784%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=VZOBuxsK4XMFnllYuXndc8A0FuengU70ros%2F48j8sdY%3D&reserved=0" style="text-decoration: none;"><img
+                      class="social-icon"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAABXmlDQ1BJQ0MgUHJvZmlsZQAAKJF1kEFLAlEQx/9rhlB7CI3o0MFbCBbieuhSYBYZLLFokXV7rptGuj3WjahDRB8hoo8Q3QuEKCjo1CkICoKgS32BwEvJa95aqUUzPObHn5l5fwbwqYzzsh9AxXadzMxkOLe0HA68QoUPQQxjgJlVnjQMnVrwXTujfg9F1rsRuWtPD10rubM1drKjBS9unv72d0RPwaqaVD/oJUzuuIASIzY2XS55l7jfIVPEB5KLTT6WnG/yudczn0kR3xL3mSVWIH4mjubb9GIbV8ob5pcH6V617IUs1UF6Q5jCNHTKMLLQEPcyjbl/ZhLeTArr4NiCg1UUUYJL00lSOMqwiGdhw8QoosRxxOROeevfN2xp2xPA2Dh99dLSshpwuk/20dIiFhCim12lOXPYz2WVur+6osWb3FsDug+FeFsEAhGg8SDEe02IxhHQ9Qhc1j8BvMdh5Z+Jid4AAAA4ZVhJZk1NACoAAAAIAAGHaQAEAAAAAQAAABoAAAAAAAKgAgAEAAAAAQAAABSgAwAEAAAAAQAAABYAAAAA69WBpwAAAcRJREFUOBGdkwF1wjAYhOneBHQO4oA6oBKQEAk42CTMwZgCcJBNAUxBcNBNQfddmrRpC68P7r3j/3O5/whpWa0i2rYt4Q466OESPAYHbcroK6KBHj4Kz6DJAyUIDtZw2Oxd40ae6HVUwQUHjQ3Ltj2MR5ZXzJVyKSxmbLU4xEW1HDE4srmaXhSOz1iMbEVRnFVzYNAJLFxH/RvfPvbhdPRGGt5f+rVO2EAfTX1Bq6TDKTyC9gzcpQF6DxsFCqe0ocpaZg8FBy3UK5WuR4cwkxmP1qbA7glFB/qHNsFbPqQe7T3sUPM9NCf9VuDVa4iBJXPab64FPuViHDBUXfgFzsAD0OV/QQUb6gizwGz3L+unrb7wKmaBnOCCU6fYcIJbg0ae6KUdMAuMW59Uhb0O1q7jS6QZeOyUyScGYfQesjZQFy8coF4ZCx0UPFRoD9YnGJ6yBkeBcqFV0uEUHqHqk2KDJr0p1KCV3MfL1KQ1+5ayUQ9+4D4+6SCkD3wt/VkD+klCnTbvrczq1whHBW5Dy/3cG5T8zKdD2aAhuBRKraFJ5ltVnuh1VEFX14GFNj18FJ5Bk/L6imihgx4uwWNwUK9U/wf4B4pe64opkYKcAAAAAElFTkSuQmCC"
+                      alt=""
+                      srcset=""
+                    /></a>
+                    <a href="https://api.whatsapp.com/send?phone=2349122222200" style="text-decoration: none;"><img
+                      class="social-icon"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABXmlDQ1BJQ0MgUHJvZmlsZQAAKJF1kEFLAlEQx/9rhlB7CI3o0MFbCBbieuhSYBYZLLFokXV7rptGuj3WjahDRB8hoo8Q3QuEKCjo1CkICoKgS32BwEvJa95aqUUzPObHn5l5fwbwqYzzsh9AxXadzMxkOLe0HA68QoUPQQxjgJlVnjQMnVrwXTujfg9F1rsRuWtPD10rubM1drKjBS9unv72d0RPwaqaVD/oJUzuuIASIzY2XS55l7jfIVPEB5KLTT6WnG/yudczn0kR3xL3mSVWIH4mjubb9GIbV8ob5pcH6V617IUs1UF6Q5jCNHTKMLLQEPcyjbl/ZhLeTArr4NiCg1UUUYJL00lSOMqwiGdhw8QoosRxxOROeevfN2xp2xPA2Dh99dLSshpwuk/20dIiFhCim12lOXPYz2WVur+6osWb3FsDug+FeFsEAhGg8SDEe02IxhHQ9Qhc1j8BvMdh5Z+Jid4AAAA4ZVhJZk1NACoAAAAIAAGHaQAEAAAAAQAAABoAAAAAAAKgAgAEAAAAAQAAABSgAwAEAAAAAQAAABQAAAAAkRXSxwAAAblJREFUOBGNk4tRg2AQhMEKKIEOTAl0kJRAB8YKwApCB8QKEisgVqBWAFZgOsBv4Y4BEtCd2ew99o6fR4JgAW3bJrCENXT8EFQwhdHC6LSMUYtq+BdqDOl0epZhyKBDpymgTqOLiDt4hDV0HGZr+pRu5g5UixZviV5sHqRDOVlKSVd35JPmSsJA7kPofrCS1NYovEiewdTzJcWjuxH0iKKAHz9dTRxrEM2g0JuWtvXeyHzy7x+o7cx/CcOwsTgx1XNMLb4rzFxpvFpzq4WPlryZSr4sbtCzxWvyac2NFsaW6EqOgqDLR6f23j1trBhp4Q1syQuNmOcy/SRu3LMCAyc9TZDOWno5edfpPVouVvBJsfuJUyh8BPzkXciQG8Y66sumt+6o3EehtGKphYklkthNY1UdHqEvlG7ksR7SYdfNEVZ93uplrAKflkduIj7ZbO01XaWyYjIU/xEwc7A5ST9LoC+9g3YQJHAPY+X3YJ4KdeTuC6novv2FXImH2yG+wHfYQEG9LUyg45nPrPBEJyr9MqY1Wlm8JvIkwyILdEK9/gbqJGf7b+pCG/IU6q+pk4mf8BvKd0Fv8AtQsmqmbIh0WAAAAABJRU5ErkJggg=="
+                      alt=""
+                      srcset=""
+                    /></a>
+                  </div>
+                  <div
+                    class="" style="display: inline-block; font-weight: lighter; text-align: right; width: 38%"
+                  >
+                    <a class="iconlink" href="https://heirslifeassurance.com" style="text-decoration: none;">
+                      www.heirslifeassurance.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- address -->
+        <!-- tag2 -->
+        <div class="container" style="margin: 5px 20px;">
+          <div class="row">
+            <div>
+              <span class="tag2">
+                <strong> HEIRS LIFE ASSURANCE LIMITED</strong> | Heirs Towers,
+                Plot 107B, Ajose Adeogun Street, Victoria Island, Lagos - Nigeria
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Authorized -->
+        <!-- tag2 -->
+        <div class="container" style="margin: 5px 20px;">
+          <div class="row">
+            <div>
+              <span class="tag2">
+                Authorized and regulated by the National Insurance Commission
+                (NAICOM)
+              </span>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- <div class="row">
+          <div>
+            <span class="downloaddate">Downloaded: {{ downloaddate }}</span>
+          </div>
+        </div> -->
+        <!--  -->
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <script>
+    function loaddata() {
+      // document.getElementById("statement-date").innerHTML = `Statement Date: ${statement?.Date}`;
+      document.getElementById("name").innerHTML = `${statement?.insuredName}`;
+      document.getElementById("PremiumPosition").innerHTML = `${statement?.PremiumPosition}`;
+      document.getElementById("policy_details_plan").innerHTML = `${statement?.policyDetail.LIFE_PLAN}`;
+      document.getElementById("policy_no").innerHTML = `${statement?.policyNo}`;
+      // document.getElementById("policyDetail.CRG_CUR_CODE").innerHTML = `${statement?.policyDetail.CRG_CUR_CODE}`;
+      document.getElementById("effectiveDate").innerHTML = `${statement?.effectiveDate}`;
+      document.getElementById("cummulative_missed_premium").innerHTML = `${statement.cummulative_missed_premium.toLocaleString('en-US', { style: 'currency', currency: statement?.policyDetail.CRG_CUR_CODE })}`
+      document.getElementById("interest_earned").innerHTML = document.getElementById("interest_earned2").innerHTML = `${statement.interest.toLocaleString('en-US', { style: 'currency', currency: statement?.policyDetail.CRG_CUR_CODE })}`
+      document.getElementById("dateduration").innerHTML = `${statement?.effectiveDate} - ${statement.expiryDate}`
+      document.getElementById("expiryDate").innerHTML = `${statement?.expiryDate}`;
+      document.getElementById("duration").innerHTML = `${statement?.duration} year`;
+      document.getElementById("premiumAmount").innerHTML = `${statement.premiumAmount.toLocaleString('en-US', { style: 'currency', currency: statement?.policyDetail.CRG_CUR_CODE })}`
+      document.getElementById("policyClause").innerHTML = `${statement?.policyClause}`;
+      document.getElementById("PremiumFrequency").innerHTML = `${statement?.PremiumFrequency}`;
+      document.getElementById("sumInsured").innerHTML = document.getElementById("sumInsured2").innerHTML = `${statement?.policyDetail?.SUM_INSURED.toLocaleString('en-US', { style: 'currency', currency: statement?.policyDetail.CRG_CUR_CODE })}`
+    }
+    loaddata();
+  </script>
+</body>
+
+</html>

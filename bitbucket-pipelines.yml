@@ -1,0 +1,13 @@
+pipelines:
+  branches:
+   master:
+    - step: 
+        name: Deploy to production
+        deployment: production
+        script:
+          - pipe: microsoft/azure-static-web-apps-deploy:main
+            variables:
+                APP_LOCATION: '$BITBUCKET_CLONE_DIR/build'
+                OUTPUT_LOCATION: ''
+                API_TOKEN: $deployment_token
+                SKIP_APP_BUILD: 'true'
