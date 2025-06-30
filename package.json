@@ -11,7 +11,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@babel/runtime": "^7.12.5",
+    "@babel/runtime": "^7.27.6",
     "@ckeditor/ckeditor5-build-classic": "^29.0.0",
     "@reduxjs/toolkit": "^1.8.5",
     "ajv": "^8.11.0",
